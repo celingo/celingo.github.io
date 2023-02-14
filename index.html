@@ -1,77 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      .calculator {
-        width: 500px;
-        height: 500px;
-        margin: 100px auto;
-        text-align: center;
-        font-size: 24px;
-        font-family: Heiti SC;
-      }
-      input[type='text'] {
-        width: 200px;
-        height: 50px;
-        text-align: right;
-        font-size: 24px;
-        font-family: Heiti SC;
-        border: none;
-      }
-      input[type='button'] {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        font-family: Heiti SC;
-        border: none;
-        background-color: lightgray;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="calculator">
-      <input type="text" id="expression">
-      <br><br>
-      <input type="button" value="1">
-      <input type="button" value="2">
-      <input type="button" value="3">
-      <input type="button" value="+">
-      <br>
-      <input type="button" value="4">
-      <input type="button" value="5">
-      <input type="button" value="6">
-      <input type="button" value="-">
-      <br>
-      <input type="button" value="7">
-      <input type="button" value="8">
-      <input type="button" value="9">
-      <input type="button" value="*">
-      <br>
-      <input type="button" value="C">
-      <input type="button" value="0">
-      <input type="button" value="=" id="calculate">
-      <input type="button" value="/">
-    </div>
-    <script>
-      let expression = document.getElementById("expression");
-      let calculate = document.getElementById("calculate");
-      let buttons = document.querySelectorAll("input[type='button']");
-      for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener("click", function() {
-          if (this.value === "C") {
-            expression.value = "";
-          } else if (this.value === "=") {
-            if (expression.value === "1+1") {
-              expression.value = "ZT ♥ YT";
-              expression.style.color = "pink";
-            } else {
-              expression.value = eval(expression.value);
-            }
-          } else {
-            expression.value += this.value;
-          }
-        });
-      }
-    </script>
-  </body>
+<head>
+	<title>Happy Valentine's Day!</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #F8C6D8;
+			font-family: 'Bradley Hand ITC', cursive;
+		}
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-top: 3em;
+		}
+		.text {
+			font-size: 72px;
+			color: #FF69B4;
+			background-image: url('https://pic.616pic.com/ys_bnew_img/00/02/21/bDK2jhUS7y.jpg');
+			background-size: 33.3%;
+			background-position: center bottom;
+			background-repeat: no-repeat;
+			padding: 0.5em;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="text">Yu Tao, Happy Valentine's Day 🌹🌹🌹!</div>
+	</div>
+</body>
 </html>
